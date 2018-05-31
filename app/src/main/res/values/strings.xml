@@ -13,6 +13,11 @@
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
 
+    <!-- New Line Character -->
+    <string name="new_line_character">\n</string>
+    <!-- Bullet for List<String> -->
+    <string name="bullet">•\u0020</string>
+
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>
         <item>Bosna</item>

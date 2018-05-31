@@ -11,8 +11,6 @@ import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
-import org.json.JSONException;
-
 import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
@@ -20,7 +18,6 @@ public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
     private Sandwich sandwich;
-    private int position;
     private TextView originTV, aliasesTV, descriptionTV, ingredientsTV;
 
     @Override
@@ -40,16 +37,16 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         try {
-            position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+            int position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
             if (position == DEFAULT_POSITION) {
                 // EXTRA_POSITION not found in intent
                 closeOnError();
                 return;
             }
+
             String[] sandwiches = getResources().getStringArray(R.array.sandwich_details);
             String json = sandwiches[position];
             sandwich = JsonUtils.parseSandwichJson(json);
-
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -74,18 +71,25 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI() {
-        //Toast.makeText(this, "Data to be populated", Toast.LENGTH_SHORT).show();
-        originTV.setText(sandwich.getPlaceOfOrigin());
-        populateListArrays(sandwich.getAlsoKnownAs(), aliasesTV);
+        /* Handle for no data */
+        if(sandwich.getPlaceOfOrigin().equals("")){
+            originTV.setText(getResources().getString(R.string.detail_error_message));
+        } else originTV.setText(sandwich.getPlaceOfOrigin());
+        if(sandwich.getAlsoKnownAs().size() == 0){
+            aliasesTV.setText(getResources().getString(R.string.detail_error_message));
+            aliasesTV.append(getResources().getString(R.string.new_line_character));
+        }else populateListArrays(sandwich.getAlsoKnownAs(), aliasesTV);
         descriptionTV.setText(sandwich.getDescription());
         populateListArrays(sandwich.getIngredients(), ingredientsTV);
     }
 
+    /* Helper method to populate List<String> into respective TextView */
     private void populateListArrays(List<String> list, TextView tv){
         StringBuilder builder = new StringBuilder();
-
         for(int i = 0; i < list.size(); i++)
-            builder.append('\u2022').append(' ').append(list.get(i)).append('\n');
+            builder.append(getResources().getString(R.string.bullet))
+                    .append(list.get(i))
+                    .append(getResources().getString(R.string.new_line_character));
 
         tv.setText(builder.toString());
     }

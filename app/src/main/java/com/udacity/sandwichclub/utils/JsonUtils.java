@@ -1,7 +1,5 @@
 package com.udacity.sandwichclub.utils;
 
-import android.util.Log;
-
 import com.udacity.sandwichclub.model.Sandwich;
 
 import org.json.JSONArray;
@@ -31,7 +29,6 @@ public class JsonUtils {
         JSONArray alsoKnownAs = nameJson.getJSONArray(ALIASES);
         List<String> alsoKnownAsList = jsonArraytoList(alsoKnownAs);
         String origin = sandwichJson.getString(ORIGIN);
-        //Log.d("JSON Parse", origin);
         String description = sandwichJson.getString(DESCRIPTION);
         String image = sandwichJson.getString(IMAGE);
         JSONArray ingredients = sandwichJson.getJSONArray(INGREDIENTS);
@@ -40,12 +37,13 @@ public class JsonUtils {
         return new Sandwich(mainName, alsoKnownAsList, origin, description, image, ingredientsList);
     }
 
+    /* Helper method to return List<String> for JSONArray */
     private static List<String> jsonArraytoList(JSONArray jsonArray) throws JSONException {
-        List<String> listdata = new ArrayList<>();
+        List<String> listData = new ArrayList<>();
         if (jsonArray != null) {
             for (int i = 0; i < jsonArray.length(); i++)
-                listdata.add(jsonArray.getString(i));
+                listData.add(jsonArray.getString(i));
         }
-        return listdata;
+        return listData;
     }
 }
