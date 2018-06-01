@@ -31,7 +31,7 @@ public class DetailActivity extends AppCompatActivity {
     @BindView(R.id.image_iv) ImageView ingredientsIv;
 
     /* Binding resources with ButterKnife */
-    @BindString(R.string.parceable_key) String parceableKey;
+    @BindString(R.string.parcelable_key) String parceableKey;
     @BindArray(R.array.sandwich_details) String[] sandwiches;
     @BindString(R.string.detail_error_message) String detailErrorMsg;
     @BindString(R.string.new_line_character) String newLineChar;

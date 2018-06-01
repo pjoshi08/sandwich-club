@@ -17,8 +17,8 @@
     <string name="new_line_character">\n</string>
     <!-- Bullet for List<String> -->
     <string name="bullet">•\u0020</string>
-    <!-- Parceable key for Sandwich object -->
-    <string name="parceable_key">sandwich</string>
+    <!-- Parcelable key for Sandwich object -->
+    <string name="parcelable_key">sandwich</string>
 
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>

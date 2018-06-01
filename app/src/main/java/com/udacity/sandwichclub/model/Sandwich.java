@@ -25,7 +25,8 @@ public class Sandwich implements Parcelable{
         this.ingredients = in.createStringArrayList();
     }
 
-    public Sandwich(String mainName, List<String> alsoKnownAs, String placeOfOrigin, String description, String image, List<String> ingredients) {
+    public Sandwich(String mainName, List<String> alsoKnownAs, String placeOfOrigin,
+                    String description, String image, List<String> ingredients) {
         this.mainName = mainName;
         this.alsoKnownAs = alsoKnownAs;
         this.placeOfOrigin = placeOfOrigin;
@@ -50,16 +51,8 @@ public class Sandwich implements Parcelable{
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getImage() {
         return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public List<String> getIngredients() {
