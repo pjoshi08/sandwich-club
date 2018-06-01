@@ -25,18 +25,14 @@
             android:layout_height="wrap_content"
             android:text="@string/detail_place_of_origin_label"
             android:textStyle="bold"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            style="@style/TextViewLabels"/>
 
         <TextView
             android:layout_below="@id/origin_label_tv"
             android:id="@+id/origin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            style="@style/TextViewDetail"/>
 
         <TextView
             android:layout_below="@id/origin_tv"
@@ -45,18 +41,14 @@
             android:layout_height="wrap_content"
             android:text="@string/detail_also_known_as_label"
             android:textStyle="bold"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            style="@style/TextViewLabels"/>
 
         <TextView
             android:layout_below="@id/aliases_label_tv"
             android:id="@+id/aliases_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            style="@style/TextViewDetail"/>
 
         <TextView
             android:layout_below="@id/description_tv"
@@ -65,31 +57,21 @@
             android:layout_height="wrap_content"
             android:text="@string/detail_ingredients_label"
             android:textStyle="bold"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+            style="@style/TextViewLabels"/>
 
         <TextView
             android:layout_below="@id/ingredients_lable_tv"
             android:id="@+id/ingredients_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            style="@style/TextViewDetail"/>
 
         <TextView
             android:layout_below="@id/decription_label_tv"
             android:id="@+id/description_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            style="@style/TextViewDetail"/>
 
         <TextView
             android:layout_below="@id/aliases_tv"
@@ -98,7 +80,6 @@
             android:layout_height="wrap_content"
             android:text="@string/detail_description_label"
             android:textStyle="bold"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+            style="@style/TextViewLabels" />
     </RelativeLayout>
 </ScrollView>
