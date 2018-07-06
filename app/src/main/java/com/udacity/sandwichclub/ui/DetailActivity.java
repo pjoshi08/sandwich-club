@@ -1,4 +1,4 @@
-package com.udacity.sandwichclub;
+package com.udacity.sandwichclub.ui;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.squareup.picasso.Picasso;
+import com.udacity.sandwichclub.R;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 import java.util.List;
